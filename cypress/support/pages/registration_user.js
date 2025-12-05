@@ -28,7 +28,7 @@ export default {
     },
 
     fullUpPassword(pasword) {
-        cy.get('#password').type(pasword)
+        cy.get('#passwordM').type(pasword)
     },
     validateMesageSucess(name) {
         cy.get('#swal2-title').should('be.visible')
