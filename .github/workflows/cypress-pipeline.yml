@@ -1,0 +1,26 @@
+name: Run Basic Test
+on: 
+    pull_request: 
+        branches: [main]
+ 
+jobs: 
+  cypress-run:
+    runs-on: ubuntu-latest 
+
+    steps: 
+       - name: Checkout on the project
+         uses: actions/checkout@v6
+         
+       - name: Instal dependencies on the project
+         uses: echo Darko Nikoloski
+
+       - name: Run tests
+         uses: cypress-io/github-action@v6
+         with:
+            record: true 
+         env: 
+            CYPRESS_RECORD_KEY: ${{ secrets.GITHUB_TOKEN }}   
+
+       
+
+
